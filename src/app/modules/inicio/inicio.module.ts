@@ -6,6 +6,8 @@ import { CardComponent } from './components/card/card.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 
 
+
+
 @NgModule({
   declarations: [
     CardComponent,
