@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./inicio-sesion.component.css']
 })
 export class InicioSesionComponent {
+
   hide = true;
 
   constructor(
@@ -67,4 +68,5 @@ export class InicioSesionComponent {
       password: this.usuarioIngresado.password = ''
     }
   }
+
 }
