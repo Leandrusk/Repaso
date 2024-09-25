@@ -4,7 +4,7 @@ body {
 
 }
 main {
-    flex: 0.5;
+    flex: 5;
 }
 footer {
     background-color: #333;
