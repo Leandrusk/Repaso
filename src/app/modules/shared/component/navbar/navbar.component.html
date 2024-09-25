@@ -1,0 +1,22 @@
+<mat-toolbar>
+
+    <span>Libros piola</span>
+  
+    <button mat-button routerLink="/inicio">Inicio</button>
+  
+    <button mat-button [matMenuTriggerFor]="producto">Generos</button>
+    <mat-menu #producto="matMenu">
+        <button mat-menu-item routerLink="general">general</button>
+      <button mat-menu-item routerLink="ficcion">Ficcion</button>
+      <button mat-menu-item routerLink="terror">Terror</button>
+      <button mat-menu-item routerLink="fantasia">Fantasia</button>
+    
+    </mat-menu>
+  
+    <button mat-button routerLink="descripcion">Nosotros</button>
+
+    <span class="example-spacer"></span>
+
+
+
+  </mat-toolbar>
