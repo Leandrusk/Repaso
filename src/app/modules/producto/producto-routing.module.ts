@@ -9,7 +9,7 @@ const routes: Routes = [
 
   {path: 'fantasia', component:FantasiaComponent},
   {path: 'ficcion', component:FiccionComponent},
-  {path: 'terror', component:TerrorComponent},
+  {path: 'terror', component: TerrorComponent},
   {path:'general', component:ProductoComponent}
 ];
 
