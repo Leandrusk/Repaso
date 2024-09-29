@@ -1,1 +1,23 @@
-<p>descripcion-de-contacto works!</p>
+<section id="contacto" class="contacto-seccion">
+    <div class="contenedor">
+      <h2>Contacto</h2>
+      <p>Si tienes alguna consulta o necesitas asistencia, no dudes en ponerte en contacto con nosotros. ¡Estamos aquí para ayudarte!</p>
+  
+      <form  class="formulario-contacto">
+        <div class="campo-formulario">
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+  
+        <div class="campo-formulario">
+          <input type="email" id="email" name="email" placeholder="Tu email" required>
+        </div>
+  
+        <div class="campo-formulario">
+          <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+        </div>
+  
+        <button type="submit" class="boton" (click)="mensaje()">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+  

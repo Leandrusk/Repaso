@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
-
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-card-fantasia',
+  templateUrl: './card-fantasia.component.html',
+  styleUrls: ['./card-fantasia.component.css']
 })
-export class CardComponent {
+export class CardFantasiaComponent {
   coleccionProductos: Producto[] = [];
 
-  coleccionInicio: Producto[] = [];
+  coleccionFantasia: Producto[] = [];
 
   productoSeleccionado!: Producto;
 
@@ -22,16 +21,16 @@ export class CardComponent {
     this.servicioCrud.obtenerProducto().subscribe(producto => {
       this.coleccionProductos = producto;
 
-      this.mostrarProductoInicio();
+      this.mostrarProductoFantasia();
     })
 
   }
 
-  mostrarProductoInicio(){
+  mostrarProductoFantasia(){
     this.coleccionProductos.forEach(producto => {
 
-      if(producto.categoria === "inicio"){
-        this.coleccionInicio.push(producto);
+      if(producto.categoria === "fantasia"){
+        this.coleccionFantasia.push(producto);
       }
     })
   }

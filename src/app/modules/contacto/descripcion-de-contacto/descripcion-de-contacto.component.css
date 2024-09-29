@@ -1,0 +1,97 @@
+/* Sección de Contacto */
+.contacto-seccion {
+    background-color: #f0f4f8;
+    padding: 50px 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+  }
+  
+  .contacto-seccion h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  .contacto-seccion p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .info-contacto {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  
+  .contacto-item {
+    text-align: center;
+  }
+  
+  .contacto-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+  
+  .contacto-item a, .contacto-item p {
+    font-size: 1.2rem;
+    color: #40798c;
+    text-decoration: none;
+  }
+  
+  .contacto-item a:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
+  
+  /* Estilo del formulario */
+  .formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .campo-formulario input,
+  .campo-formulario textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #d3d3d3;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: border-color 0.3s;
+  }
+  
+  .campo-formulario input:focus,
+  .campo-formulario textarea:focus {
+    border-color: #1b4332;
+    outline: none;
+  }
+  
+  .boton {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #2d6a4f;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .boton:hover {
+    background-color: #1b4332;
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 768px) {
+    .info-contacto {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  

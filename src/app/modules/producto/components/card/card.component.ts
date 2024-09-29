@@ -8,12 +8,13 @@ import { CrudService } from 'src/app/modules/admin/services/crud.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+  // Definimos colección local de productos
   coleccionProductos: Producto[] = [];
 
-  coleccionInicio: Producto[] = [];
-
+  // Variable local para obtener producto seleccionado
   productoSeleccionado!: Producto;
 
+  // Variable para manejar estado de un modal
   modalVisible: boolean = false;
 
   constructor(public servicioCrud: CrudService){}
@@ -21,24 +22,15 @@ export class CardComponent {
   ngOnInit(): void{
     this.servicioCrud.obtenerProducto().subscribe(producto => {
       this.coleccionProductos = producto;
-
-      this.mostrarProductoInicio();
-    })
-
-  }
-
-  mostrarProductoInicio(){
-    this.coleccionProductos.forEach(producto => {
-
-      if(producto.categoria === "inicio"){
-        this.coleccionInicio.push(producto);
-      }
     })
   }
 
+  // Función para modal que muestre la información de un producto en específico
   mostrarVer(info: Producto){
+    // Habilita visibilidad del modal
     this.modalVisible = true;
 
+    // Guarda información de un producto elegido por el usuario
     this.productoSeleccionado = info;
   }
 }

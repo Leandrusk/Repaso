@@ -1,37 +1,37 @@
 <mat-toolbar>
 
-    <span>Libros piola</span>
+  <span><img src="./assets/logo.jpg" alt="libros piolas"></span>
+
+  <button mat-button routerLink="/inicio">Inicio</button>
+
+  <button mat-button [matMenuTriggerFor]="producto">Generos</button>
+  <mat-menu #producto="matMenu">
+      <button mat-menu-item routerLink="general">general</button>
+    <button mat-menu-item routerLink="ficcion">Ficcion</button>
+    <button mat-menu-item routerLink="terror">Terror</button>
+    <button mat-menu-item routerLink="fantasia">Fantasia</button>
   
-    <button mat-button routerLink="/inicio">Inicio</button>
+  </mat-menu>
+
+  <button mat-button routerLink="descripcion">Nosotros</button>
+
+  <button mat-button routerLink="descripcion_de_contacto">Contacto</button>
+
+  <span class="example-spacer"></span>
+
   
-    <button mat-button [matMenuTriggerFor]="producto">Generos</button>
-    <mat-menu #producto="matMenu">
-        <button mat-menu-item routerLink="general">general</button>
-      <button mat-menu-item routerLink="ficcion">Ficcion</button>
-      <button mat-menu-item routerLink="terror">Terror</button>
-      <button mat-menu-item routerLink="fantasia">Fantasia</button>
-    
-    </mat-menu>
-  
-    <button mat-button routerLink="descripcion">Nosotros</button>
-
-    <button mat-button routerLink="descripcion_de_contacto">Contacto</button>
-
-    <span class="example-spacer"></span>
-
-    
 
 
 
-    <!--inicio de sesion y formulario de registro-->
-    <button mat-icon-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
-    <mat-menu #usuario="matMenu">
-      <button mat-menu-item routerLink="/registro">Registro</button>
-      <button mat-menu-item routerLink="/inicio-sesion">Iniciar sesion</button>
-  
-    </mat-menu>
+  <!--inicio de sesion y formulario de registro-->
+  <button mat-icon-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
+  <mat-menu #usuario="matMenu">
+    <button mat-menu-item routerLink="/registro">Registro</button>
+    <button mat-menu-item routerLink="/inicio-sesion">Iniciar sesion</button>
 
-      <!--Label Para Modo Oscuro-->
-      <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
-      <input type="checkbox" id="toggle" (click)="cambiarFondo()">
-  </mat-toolbar>
+  </mat-menu>
+
+    <!--Label Para Modo Oscuro-->
+    <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
+    <input type="checkbox" id="toggle" (click)="cambiarFondo()">
+</mat-toolbar>

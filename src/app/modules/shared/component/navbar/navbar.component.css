@@ -2,14 +2,81 @@
     flex: 1 1 auto;
 }
 
-/*
-    1) Tomi: Permite crear e implementar diseños según el dispositivo que estás usando
-    2) Thiago: Técnica introducida por CSS3 para aplicar propiedades según condiciones V o F
-    3) Javi: Permite modificar la resolución de pantalla
-    4) More: Permite especificar la visualización de un documento para diferentes tamaños de pantalla
-*/
-
 /* Declaramos con palabra reservada MEDIA -> DISPOSITIVOS PEQUEÑOS (ej.: celular) */
+@media (min-width: 300px) and (max-width: 700px) {
+    mat-toolbar{
+        background-color: rgb(63, 1, 4);
+    }
+
+    #menuInicio{
+        display: none;
+    }
+
+    #menuProducto{
+        display: none;
+    }
+}
+
+/* DISPOSITIVOS MÁS GRANDES (ej.: computadora) */
+@media (min-width: 700px) {
+    mat-toolbar{
+        background-color:#000000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #333; /* Color de fondo del navbar */
+    }
+
+    #menuSecciones{
+        display: none;
+    }
+}
+
+mat-toolbar {
+    color: white; /* Aplica color blanco a todo el contenido de mat-toolbar */
+    height: 10%;
+  }
+  
+  mat-toolbar button, mat-toolbar span, mat-toolbar mat-icon, mat-toolbar label {
+    color: white !important; /* Asegura que todos los textos de botones, spans, íconos y labels sean blancos */
+  }
+  
+  mat-menu {
+    color: white !important; /* Asegura que el texto dentro de los menús también sea blanco */
+  }
+  
+  mat-menu button {
+    color: white !important; /* Los botones dentro de mat-menu también tendrán texto blanco */
+  }
+  
+  #label_toggle i {
+    color: white; /* Asegura que el ícono de la luna también sea blanco */
+  }
+  .blanco{
+    color: white; /* Asegura que el texto en blanco también sea blanco */
+  }
+
+  img{
+    width: 200px;
+    
+  }
+  
+  .logo-responsive {
+    max-width: 50%;
+    height: auto;
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .logo-responsive {
+      max-width: 120%; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+      max-height: 100%;
+      margin: 0 auto; /* Centra la imagen */
+    }
+  }
+  
+
 @media (min-width: 300px) and (max-width: 700px) {
     mat-toolbar{
         background-color: pink;
@@ -27,7 +94,7 @@
 /* DISPOSITIVOS MÁS GRANDES (ej.: computadora) */
 @media (min-width: 700px) {
     mat-toolbar{
-        background-color:#a9b2bb
+        background-color: rgb(0, 0, 0);
     }
 
     #menuSecciones{

@@ -3,14 +3,15 @@ import { Producto } from 'src/app/models/producto';
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-card-terror',
+  templateUrl: './card-terror.component.html',
+  styleUrls: ['./card-terror.component.css']
 })
-export class CardComponent {
+export class CardTerrorComponent {
+
   coleccionProductos: Producto[] = [];
 
-  coleccionInicio: Producto[] = [];
+  coleccionTerror: Producto[] = [];
 
   productoSeleccionado!: Producto;
 
@@ -22,16 +23,16 @@ export class CardComponent {
     this.servicioCrud.obtenerProducto().subscribe(producto => {
       this.coleccionProductos = producto;
 
-      this.mostrarProductoInicio();
+      this.mostrarProductoTerror();
     })
 
   }
 
-  mostrarProductoInicio(){
+  mostrarProductoTerror(){
     this.coleccionProductos.forEach(producto => {
 
-      if(producto.categoria === "inicio"){
-        this.coleccionInicio.push(producto);
+      if(producto.categoria === "terror"){
+        this.coleccionTerror.push(producto);
       }
     })
   }
